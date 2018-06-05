@@ -1,0 +1,7 @@
+D:\Github\sayu\sayu\bin\Debug\sayu.exe.config
+D:\Github\sayu\sayu\obj\Debug\sayu.Properties.Resources.resources
+D:\Github\sayu\sayu\obj\Debug\sayu.csproj.GenerateResource.Cache
+D:\Github\sayu\sayu\bin\Debug\sayu.exe
+D:\Github\sayu\sayu\bin\Debug\sayu.pdb
+D:\Github\sayu\sayu\obj\Debug\sayu.exe
+D:\Github\sayu\sayu\obj\Debug\sayu.pdb
