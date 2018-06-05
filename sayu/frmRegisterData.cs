@@ -30,7 +30,7 @@ namespace sayu
             base.OnClick(e);
             Dispose(true);
         }
-
+        //MB寄存器Get/Set --BIT数据/位
         private void cmdMB_Click(object sender, EventArgs e)
         {
             bool bGetValue;		// 获取寄存器值
@@ -69,27 +69,27 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //MW寄存器Get/Set--2字节
         private void cmdMW_Click(object sender, EventArgs e)
         {
-            short nGetValue = 0;		// レジスタ取得値
-            short nSetValue = 0;		// レジスタ設定値
+            short nGetValue = 0;		// 寄存器取值
+            short nSetValue = 0;		// 寄存器设置
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタの2バイトデータを設定／取得」メソッドを実行します。よろしいですか？\n\n  レジスタ：MW00000",
-                "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
+            result = MessageBox.Show("执行“设置/取得寄存器的2个字节数据”方法。可以吗？\n\n 寄存器：MW00000",
+                "执行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
                 if (result == DialogResult.OK)
                 {
                     nGetValue = sayu.Form1.frm1.axMPScope1.get_MW(0);
 
-                    // インクリメントして設定
+                    // 补充设置
                     nSetValue = (short)(nGetValue + 1);
 
                     sayu.Form1.frm1.axMPScope1.set_MW(0, nSetValue);
-                    MessageBox.Show("メソッドは正常に終了しました。\n\n  MW00000\n\n   取得\t：" + nGetValue + "\n   設定\t：" + nSetValue,
-                        "メソッド実行", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show("方法正常结束\n\n  MW00000\n\n   取得\t：" + nGetValue + "\n   设定\t：" + nSetValue,
+                        "执行", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
             }
             catch (Exception err)
@@ -97,27 +97,27 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //ML寄存器Get/Set--4字节
         private void cmdML_Click(object sender, EventArgs e)
         {
-            int nGetValue = 0;		// レジスタ取得値
-            int nSetValue = 0;		// レジスタ設定値
+            int nGetValue = 0;		//寄存器取得值
+            int nSetValue = 0;		// 寄存器设定值
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタの4バイトデータを設定／取得」メソッドを実行します。よろしいですか？\n\n  レジスタ：ML00000",
-                "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
+            result = MessageBox.Show("执行“设置/取得寄存器的4个字节数据”方法。可以吗？\n\n  寄存器：ML00000",
+                "执行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
                 if (result == DialogResult.OK)
                 {
                     nGetValue = sayu.Form1.frm1.axMPScope1.get_ML(0);
 
-                    // インクリメントして設定
+                    //补充设置
                     nSetValue = nGetValue + 1;
 
                     sayu.Form1.frm1.axMPScope1.set_ML(0, nSetValue);
-                    MessageBox.Show("メソッドは正常に終了しました。\n\n  ML00000\n\n   取得\t：" + nGetValue + "\n   設定\t：" + nSetValue,
-                        "メソッド実行", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show("方法正常结束\n\n  ML00000\n\n  取得\t：" + nGetValue + "\n   设置\t：" + nSetValue,
+                        "执行", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
             }
             catch (Exception err)
@@ -125,27 +125,27 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //MF寄存器Get/Set--4字节单精度浮点
         private void cmdMF_Click(object sender, EventArgs e)
         {
-            float nGetValue = 0;		// レジスタ取得値
-            float nSetValue = 0;		// レジスタ設定値
+            float nGetValue = 0;		//寄存器取得值
+            float nSetValue = 0;		// 寄存器设定值
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタの単精度浮動小数点(4バイト)を設定／取得」メソッドを実行します。よろしいですか？\n\n  レジスタ：MF00000",
-                "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
+            result = MessageBox.Show("执行“设置/取得寄存器的精度浮点（4字节）的方法。可以吗？\n\n  寄存器：MF00000",
+                "执行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
                 if (result == DialogResult.OK)
                 {
                     nGetValue = sayu.Form1.frm1.axMPScope1.get_MF(0);
 
-                    // インクリメントして設定
+                    // 补充设置
                     nSetValue = nGetValue + 1.0f;
 
                     sayu.Form1.frm1.axMPScope1.set_MF(0, nSetValue);
-                    MessageBox.Show("メソッドは正常に終了しました。\n\n  MF00000\n\n   取得\t：" + nGetValue + "\n   設定\t：" + nSetValue,
-                        "メソッド実行", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show("方法正常结束\n\n  MF00000\n\n   取得\t：" + nGetValue + "\n   设置\t：" + nSetValue,
+                        "执行", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
             }
             catch (Exception err)
@@ -153,15 +153,15 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //DW寄存器Get/Set--2字节
         private void cmdDW_Click(object sender, EventArgs e)
         {
-            short nGetValue = 0;		// レジスタ取得値
-            short nSetValue = 0;		// レジスタ設定値
+            short nGetValue = 0;		//寄存器取得
+            short nSetValue = 0;		// 寄存器设定
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタの2バイトデータを設定／取得」メソッドを実行します。よろしいですか？\n\n  レジスタ：DW00000\n  プログラム：H",
-                "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
+            result = MessageBox.Show("执行“设置/取得寄存器的2个字节数据”方法。可以吗？\n\n  寄存器：DW00000\n  程序：H",
+                "执行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
                 if (result == DialogResult.OK)
@@ -169,12 +169,12 @@ namespace sayu
                     sayu.Form1.frm1.axMPScope1.ProgramName = "H";
                     nGetValue = sayu.Form1.frm1.axMPScope1.get_DW(0);
 
-                    // インクリメントして設定
+                    // 补充设置
                     nSetValue = (short)(nGetValue + 1);
 
                     sayu.Form1.frm1.axMPScope1.set_DW(0, nSetValue);
-                    MessageBox.Show("メソッドは正常に終了しました。\n\n  DW00000\n  プログラム：H\n\n   取得\t：" + nGetValue + "\n   設定\t：" + nSetValue,
-                        "メソッド実行", MessageBoxButtons.OK, MessageBoxIcon.None);
+                    MessageBox.Show("正常结束\n\n  DW00000\n  程序：H\n\n   取得\t：" + nGetValue + "\n   設定\t：" + nSetValue,
+                        "执行", MessageBoxButtons.OK, MessageBoxIcon.None);
                 }
             }
             catch (Exception err)
@@ -182,15 +182,15 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //MQ寄存器Get/Set--8字节
         private void cmdMQ_Click(object sender, System.EventArgs e)
         {
             Int64 nGetValue = 0;		// レジスタ取得値
             Int64 nSetValue = 0;		// レジスタ設定値
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタの8バイトデータを設定／取得」メソッドを実行します。よろしいですか？\n\n  レジスタ：MQ00000",
-                "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
+            result = MessageBox.Show("执行“设置/获取寄存器的8字节数据”方法。可以吗？\n\n 寄存器：MQ00000",
+                "执行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
                 if (result == DialogResult.OK)
@@ -210,15 +210,15 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //MD寄存器Get/Set--8字节双精度
         private void cmdMD_Click(object sender, System.EventArgs e)
         {
             double nGetValue = 0;		// レジスタ取得値
             double nSetValue = 0;		// レジスタ設定値
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタの倍精度浮動小数点(8バイト)を設定／取得」メソッドを実行します。よろしいですか？\n\n  レジスタ：MD00000",
-                "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
+            result = MessageBox.Show("设置/取得寄存器的双精度浮点（8字节）”方法。可以吗？\n\n 寄存器：MD00000",
+                "执行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
                 if (result == DialogResult.OK)

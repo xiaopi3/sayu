@@ -35,7 +35,7 @@ namespace sayu
             base.OnClick(e);
             Application.Exit();
         }
-        //读取寄存器
+        //读/写寄存器
         private void cmdReadReg_Click(object sender, System.EventArgs e)
         {
             base.OnClick(e);
@@ -48,11 +48,12 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //打开控制器通信
         private void cmdCommOpen_Click(object sender, System.EventArgs e)
         {
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("コントローラの通信経路をオープンします。よろしいですか？\n\n  通信設定のファイルパス\t：test.ini",
+            result = MessageBox.Show("打开控制器的通信路径。可以吗？\n\n  通信设置文件路径\t：test.ini",
                 "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
@@ -69,11 +70,12 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+        //关闭控制器通信
         private void cmdCommClose_Click(object sender, System.EventArgs e)
         {
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("コントローラの通信経路をクローズします。よろしいですか？",
+            result = MessageBox.Show("关闭控制器的通信路径。可以吗？",
                 "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             try
             {
@@ -89,7 +91,7 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //读/写寄存器块
         private void cmdRegisterBlock_Click(object sender, System.EventArgs e)
         {
             base.OnClick(e);
@@ -103,7 +105,7 @@ namespace sayu
             }
 
         }
-
+        //以CSV格式读/写寄存器
         private void frmCSV_Click(object sender, EventArgs e)
         {
             base.OnClick(e);

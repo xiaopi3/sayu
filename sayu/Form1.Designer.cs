@@ -55,7 +55,7 @@
             this.cmdReadReg.Name = "cmdReadReg";
             this.cmdReadReg.Size = new System.Drawing.Size(96, 128);
             this.cmdReadReg.TabIndex = 2;
-            this.cmdReadReg.Text = "レジスタデータの設定／取得";
+            this.cmdReadReg.Text = "レジスタデータの設定／取得（寄存器数据设置和获取）";
             this.cmdReadReg.Click += new System.EventHandler(this.cmdReadReg_Click);
             // 
             // cmdCommOpen
@@ -64,7 +64,7 @@
             this.cmdCommOpen.Name = "cmdCommOpen";
             this.cmdCommOpen.Size = new System.Drawing.Size(88, 32);
             this.cmdCommOpen.TabIndex = 3;
-            this.cmdCommOpen.Text = "オープン";
+            this.cmdCommOpen.Text = "オープン（打开控制器通信）";
             this.cmdCommOpen.Click += new System.EventHandler(this.cmdCommOpen_Click);
             // 
             // cmdCommClose
@@ -73,7 +73,7 @@
             this.cmdCommClose.Name = "cmdCommClose";
             this.cmdCommClose.Size = new System.Drawing.Size(80, 32);
             this.cmdCommClose.TabIndex = 4;
-            this.cmdCommClose.Text = "クローズ";
+            this.cmdCommClose.Text = "クローズ（关闭控制器通信）";
             this.cmdCommClose.Click += new System.EventHandler(this.cmdCommClose_Click);
             // 
             // cmdRegisterBlock
@@ -82,7 +82,7 @@
             this.cmdRegisterBlock.Name = "cmdRegisterBlock";
             this.cmdRegisterBlock.Size = new System.Drawing.Size(96, 128);
             this.cmdRegisterBlock.TabIndex = 5;
-            this.cmdRegisterBlock.Text = "レジスタデータの読み込み／書き込み（ブロック／ランダム）";
+            this.cmdRegisterBlock.Text = "レジスタデータの読み込み／書き込み（ブロック／ランダム）（寄存器数据的读取/写入（块/随机））";
             this.cmdRegisterBlock.Click += new System.EventHandler(this.cmdRegisterBlock_Click);
             // 
             // frmCSV
@@ -91,7 +91,7 @@
             this.frmCSV.Name = "frmCSV";
             this.frmCSV.Size = new System.Drawing.Size(96, 128);
             this.frmCSV.TabIndex = 6;
-            this.frmCSV.Text = "レジスタデータのCSV形式読み込み／書き込み（ブロック／ランダム）";
+            this.frmCSV.Text = "レジスタデータのCSV形式読み込み／書き込み（ブロック／ランダム）（寄存器数据的CSV格式读取/写入（块/随机））";
             this.frmCSV.Click += new System.EventHandler(this.frmCSV_Click);
             // 
             // frmSystemReg
@@ -100,7 +100,7 @@
             this.frmSystemReg.Name = "frmSystemReg";
             this.frmSystemReg.Size = new System.Drawing.Size(96, 128);
             this.frmSystemReg.TabIndex = 7;
-            this.frmSystemReg.Text = "システムレジスタ参照";
+            this.frmSystemReg.Text = "システムレジスタ参照（系统寄存器）";
             this.frmSystemReg.Click += new System.EventHandler(this.frmSystemReg_Click);
             // 
             // cmdComm
@@ -118,7 +118,7 @@
             this.cmdTableData.Name = "cmdTableData";
             this.cmdTableData.Size = new System.Drawing.Size(96, 128);
             this.cmdTableData.TabIndex = 9;
-            this.cmdTableData.Text = "表データのCSV形式読み込み／書き込み）";
+            this.cmdTableData.Text = "表データのCSV形式読み込み／書き込み）（表格数据的CSV形式读取/写）";
             this.cmdTableData.Click += new System.EventHandler(this.cmdTableData_Click);
             // 
             // axMPScope1
@@ -145,7 +145,7 @@
             this.Controls.Add(this.cmdReadReg);
             this.Controls.Add(this.cmdClose);
             this.Name = "Form1";
-            this.Text = "MPScopeサンプル(C#)";
+            this.Text = "MPScope示例(C#)";
             ((System.ComponentModel.ISupportInitialize)(this.axMPScope1)).EndInit();
             this.ResumeLayout(false);
 

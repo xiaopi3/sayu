@@ -26,7 +26,7 @@ namespace sayu
             base.OnClick(e);
             Dispose(true);
         }
-
+        //读取寄存器块
         private void cmdReadRegBlock_Click(object sender, EventArgs e)
         {
             string szRegister = "MW00000";
@@ -35,7 +35,7 @@ namespace sayu
             short[] ary;
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタデータのブロック読み込み」メソッドを実行します。よろしいですか？\n\n  レジスタ\t\t：MW00000\n  レジスタ数\t：2",
+            result = MessageBox.Show("执行“读取寄存器数据的块读取”方法。可以吗？\n\n  寄存器\t\t：MW00000\n  寄存器数\t：2",
                                     "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             ary = new short[2];
             nData = new short[2];
@@ -55,7 +55,7 @@ namespace sayu
             }
 
         }
-
+        //写入寄存器块
         private void cmdWriteRegBlock_Click(object sender, EventArgs e)
         {
             string szRegister = "MW00000";
@@ -64,7 +64,7 @@ namespace sayu
             short[] ary;
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタデータのブロック書き込み」メソッドを実行します。よろしいですか？\n\n  レジスタ\t\t：MW00000\n  レジスタ数\t：2",
+            result = MessageBox.Show("执行“寄存器数据的块写入”方法。可以吗？\n\n  レジスタ\t\t：MW00000\n  レジスタ数\t：2",
                 "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             ary = new short[2];
             nData = new short[2];
@@ -87,7 +87,7 @@ namespace sayu
             }
 
         }
-
+        //寄存器随机读取
         private void cmdReadRegList_Click(object sender, EventArgs e)
         {
             string szRegister = "MW00000\nMW00100";
@@ -95,7 +95,7 @@ namespace sayu
             short[] ary;
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタデータのランダム読み込み」メソッドを実行します。よろしいですか？\n\n  レジスタ\t\t：MW00000\n  レジスタ\t\t：MW00100",
+            result = MessageBox.Show("执行“寄存器数据的随机读取”方法。可以吗？\n\n  寄存器\t\t：MW00000\n  寄存器\t\t：MW00100",
                 "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             ary = new short[2];
             nData = new short[2];
@@ -114,7 +114,7 @@ namespace sayu
                 MessageBox.Show(err.Message, "Error Message", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-
+        //寄存器随机写入
         private void cmdWriteRegList_Click(object sender, EventArgs e)
         {
             string szRegister = "MW00000\nMW00100";
@@ -122,7 +122,7 @@ namespace sayu
             short[] ary;
             System.Windows.Forms.DialogResult result;
             base.OnClick(e);
-            result = MessageBox.Show("「レジスタデータのランダム書き込み」メソッドを実行します。よろしいですか？\n\n  レジスタ\t\t：MW00000\n  レジスタ\t\t：MW00100",
+            result = MessageBox.Show("执行“寄存器数据的随机写入”方法。可以吗？\n\n  レジスタ\t\t：MW00000\n  レジスタ\t\t：MW00100",
                 "メソッド実行", MessageBoxButtons.OKCancel, MessageBoxIcon.None);
             ary = new short[2];
             nData = new short[2];
