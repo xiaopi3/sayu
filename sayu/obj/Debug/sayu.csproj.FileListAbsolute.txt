@@ -5,3 +5,10 @@ D:\Github\sayu\sayu\bin\Debug\sayu.exe
 D:\Github\sayu\sayu\bin\Debug\sayu.pdb
 D:\Github\sayu\sayu\obj\Debug\sayu.exe
 D:\Github\sayu\sayu\obj\Debug\sayu.pdb
+D:\北京项目\sayu\sayu\bin\Debug\sayu.exe.config
+D:\北京项目\sayu\sayu\obj\Debug\sayu.exe
+D:\北京项目\sayu\sayu\obj\Debug\sayu.pdb
+D:\北京项目\sayu\sayu\bin\Debug\sayu.exe
+D:\北京项目\sayu\sayu\bin\Debug\sayu.pdb
+D:\北京项目\sayu\sayu\obj\Debug\sayu.Properties.Resources.resources
+D:\北京项目\sayu\sayu\obj\Debug\sayu.csproj.GenerateResource.Cache
